@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset=utf-8" />
+    <title>Project F</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // Первый дом, 75, зеленый.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: 47.8612146, lng: 35.0281028}
+        });
+
+        // Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          {lat: 47.861668, lng: 35.028089}, //северо запад
+		  {lat: 47.861538, lng: 35.028094}, //юго запад
+		  {lat: 47.861535, lng: 35.026689}, //юго восток
+		  {lat: 47.861661, lng: 35.026689} //северо восток
+        ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Второй дом, 77А, зеленый.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          {lat: 47.861142, lng: 35.026678}, //северо запад
+		  {lat: 47.861135, lng: 35.028083}, //юго запад
+		  {lat: 47.860998, lng: 35.028083}, //юго восток
+		  {lat: 47.860998, lng: 35.026678} //северо восток
+        ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Третий дом, 81, зеленый.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          {lat: 47.860623, lng: 35.028330}, //северо запад
+		  {lat: 47.860623, lng: 35.026914}, //юго запад
+		  {lat: 47.860491, lng: 35.026914}, //юго восток
+		  {lat: 47.860484, lng: 35.028330} //северо восток
+        ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Четвертый дом, 79, зеленый.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          {lat: 47.860941, lng: 35.029607}, //северо запад
+		  {lat: 47.860826, lng: 35.029682}, //юго запад
+		  {lat: 47.860574, lng: 35.028759}, //юго восток
+		  {lat: 47.860689, lng: 35.028673} //северо восток
+        ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Пятый дом, 65Б, зеленый.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          {lat: 47.861595, lng: 35.028443}, //северо запад
+		  {lat: 47.861716, lng: 35.028368}, //юго запад
+		  {lat: 47.861975, lng: 35.029304}, //юго восток
+		  {lat: 47.861863, lng: 35.029375} //северо восток
+        ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Шестой дом, 65А, зеленый.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.862161,35.026766),
+		  new google.maps.LatLng(47.862165,35.027737),
+		  new google.maps.LatLng(47.862283,35.028510),
+		  new google.maps.LatLng(47.862503,35.029129),
+		  new google.maps.LatLng(47.862573,35.029403),
+		  new google.maps.LatLng(47.862472,35.029475),
+		  new google.maps.LatLng(47.862402,35.029213),
+		  new google.maps.LatLng(47.862179,35.028571),
+		  new google.maps.LatLng(47.862055,35.027839),
+		  new google.maps.LatLng(47.862046,35.026769),
+		  new google.maps.LatLng(47.862159,35.026769)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Седьмой дом, 69А, зеленый.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.863183,35.027018),
+          new google.maps.LatLng(47.862768,35.027174),
+          new google.maps.LatLng(47.862791,35.027322),
+          new google.maps.LatLng(47.862751,35.027340),
+          new google.maps.LatLng(47.862980,35.028665),
+          new google.maps.LatLng(47.863063,35.028630),
+          new google.maps.LatLng(47.862834,35.027295),
+          new google.maps.LatLng(47.863207,35.027153)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#00FF00',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#00FF00',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Восьмой дом, 71, синий.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.863639,35.025842),
+          new google.maps.LatLng(47.863567,35.025968),
+          new google.maps.LatLng(47.863882,35.026375),
+          new google.maps.LatLng(47.863936,35.026681),
+          new google.maps.LatLng(47.864039,35.026635),
+          new google.maps.LatLng(47.863976,35.026278)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#0000FF',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Девятый дом, 69, синий.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.863770,35.027106),
+          new google.maps.LatLng(47.863838,35.026985),
+          new google.maps.LatLng(47.864173,35.027416),
+          new google.maps.LatLng(47.864238,35.027765),
+          new google.maps.LatLng(47.864138,35.027820),
+          new google.maps.LatLng(47.864083,35.027508)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#0000FF',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Десятый дом, 67, синий.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.863967,35.028256),
+          new google.maps.LatLng(47.864032,35.028132),
+          new google.maps.LatLng(47.864371,35.028565),
+          new google.maps.LatLng(47.864437,35.028914),
+          new google.maps.LatLng(47.864337,35.028960),
+          new google.maps.LatLng(47.864276,35.028656)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#0000FF',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Одинадцатый дом, 65, синий.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.863086,35.029457),
+          new google.maps.LatLng(47.863193,35.029430),
+          new google.maps.LatLng(47.863403,35.030664),
+          new google.maps.LatLng(47.863719,35.031092),
+          new google.maps.LatLng(47.863643,35.031211),
+          new google.maps.LatLng(47.863302,35.030752)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#0000FF',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Двенадцатый дом, 77, красный.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.861174,35.028413),
+          new google.maps.LatLng(47.861266,35.028765),
+          new google.maps.LatLng(47.861237,35.028775),
+          new google.maps.LatLng(47.861315,35.029068),
+          new google.maps.LatLng(47.861338,35.029050),
+          new google.maps.LatLng(47.861436,35.029416),
+          new google.maps.LatLng(47.861331,35.029458),
+          new google.maps.LatLng(47.861228,35.029125),
+          new google.maps.LatLng(47.861200,35.029144),
+          new google.maps.LatLng(47.861117,35.028830),
+          new google.maps.LatLng(47.861148,35.028806),
+          new google.maps.LatLng(47.861062,35.028492)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Тринадцатый дом, 79А, красный.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.860199,35.028896),
+          new google.maps.LatLng(47.860101,35.028967),
+          new google.maps.LatLng(47.860184,35.029294),
+          new google.maps.LatLng(47.860158,35.029310),
+          new google.maps.LatLng(47.860245,35.029630),
+          new google.maps.LatLng(47.860270,35.029619),
+          new google.maps.LatLng(47.860361,35.029947),
+          new google.maps.LatLng(47.860461,35.029883),
+          new google.maps.LatLng(47.860371,35.029559),
+          new google.maps.LatLng(47.860355,35.029569),
+          new google.maps.LatLng(47.860262,35.029239),
+          new google.maps.LatLng(47.860288,35.029223)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Четырнадцатый дом, 79Б, красный.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.860728,35.030037),
+          new google.maps.LatLng(47.860846,35.029972),
+          new google.maps.LatLng(47.861003,35.030569),
+          new google.maps.LatLng(47.860897,35.030635)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Пятнадцатый дом, 81А, красный.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.859938,35.028708),
+          new google.maps.LatLng(47.860049,35.028702),
+          new google.maps.LatLng(47.860056,35.028499),
+          new google.maps.LatLng(47.860086,35.028492),
+          new google.maps.LatLng(47.860087,35.028150),
+          new google.maps.LatLng(47.860060,35.028141),
+          new google.maps.LatLng(47.860058,35.027434),
+          new google.maps.LatLng(47.860090,35.027440),
+          new google.maps.LatLng(47.860088,35.027091),
+          new google.maps.LatLng(47.859970,35.027083),
+          new google.maps.LatLng(47.859975,35.027425),
+          new google.maps.LatLng(47.859949,35.027426),
+          new google.maps.LatLng(47.859944,35.028149),
+          new google.maps.LatLng(47.859970,35.028153),
+          new google.maps.LatLng(47.859963,35.028504),
+          new google.maps.LatLng(47.859941,35.028498)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+		
+		//
+		//
+		//
+		// Шестнадцатый дом, 83, красный.
+		
+		// Define the LatLng coordinates for the polygon's path.
+        var houseCoords = [
+          new google.maps.LatLng(47.860155,35.026066),
+          new google.maps.LatLng(47.860189,35.026238),
+          new google.maps.LatLng(47.860443,35.026143),
+          new google.maps.LatLng(47.860437,35.026113),
+          new google.maps.LatLng(47.860865,35.025952),
+          new google.maps.LatLng(47.860831,35.025761),
+          new google.maps.LatLng(47.860379,35.025932),
+          new google.maps.LatLng(47.860382,35.025980)
+		  ];
+		
+        // Construct the polygon.
+        var house = new google.maps.Polygon({
+          paths: houseCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        house.setMap(map);
+		
+		// Construct a new InfoWindow.
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<b> 9 этажей </br> крупнопанельный </br>'+
+		  'жилой </br> коммунальная собсвенность </b>'+
+		  '</br> 1973 </br> 69000, г. Запорожье, </br>'+
+		  'ул. Кремлевска, 65 </br></br> <a href=\"http://vk.com/id1\">Дополнительные атрибуты</a>' 
+        });
+
+        // Opens the InfoWindow when marker is clicked.
+        house.addListener('click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.open(map);
+		  title:"Hello World!"
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+  </body>
+</html>
